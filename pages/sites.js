@@ -23,6 +23,7 @@ export default function sites() {
 
   return (
     <DashboardShell>
+      <SiteTableHeader />
       {sites && sites.length ? <SiteTable sites={sites} /> : <EmptyState />}
     </DashboardShell>
   )
