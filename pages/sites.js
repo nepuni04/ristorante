@@ -2,12 +2,12 @@ import useSWR from 'swr'
 import fetcher from '@/utils/fetcher'
 import { useAuth } from '@/lib/auth'
 import SiteTable from '@/components/SiteTable'
-import EmptyState from '@/components/EmptyState'
+import SiteEmptyState from '@/components/SiteEmptyState'
 import DashboardShell from '@/components/DashboardShell'
 import SiteTableHeader from '@/components/SiteTableHeader'
 import SiteTableSkeleton from '@/components/SiteTableSkeleton'
 
-export default function sites() {
+export default function Sites() {
   const { user } = useAuth();
 	const { data } = useSWR(user ? ['/api/sites', user.token] : null, fetcher)
   const sites = data?.sites
@@ -24,7 +24,7 @@ export default function sites() {
   return (
     <DashboardShell>
       <SiteTableHeader />
-      {sites && sites.length ? <SiteTable sites={sites} /> : <EmptyState />}
+      {sites && sites.length ? <SiteTable sites={sites} /> : <SiteEmptyState />}
     </DashboardShell>
   )
 }

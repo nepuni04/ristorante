@@ -14,3 +14,16 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@media only screen and (min-width: 680px) {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .box-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .box-scroll {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+}

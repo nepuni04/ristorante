@@ -1,8 +1,7 @@
-
-import { Box, Heading, VStack, Text, Button } from '@chakra-ui/react'
+import { Box, Heading, VStack, Text } from '@chakra-ui/react'
 import AddSiteModal from './AddSiteModal'
 
-export default function EmptyState() {
+export default function SiteEmptyState() {
 	return (
 		<Box
 			backgroundColor="white"

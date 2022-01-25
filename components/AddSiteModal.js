@@ -82,7 +82,6 @@ const AddSiteModal = ({ children }) => {
 							<FormLabel>Name</FormLabel>
 							<Input
 								placeholder="My site"
-								// Register the field so we can access the value
 								{...register("name", { required: true })}
 							/>
 						</FormControl>

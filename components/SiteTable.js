@@ -6,7 +6,7 @@ import DeleteSiteButton from './DeleteSiteButton'
 
 const SiteTable = ({ sites }) => {
   return (
-    <Box overflowX="scroll">
+    <Box overflowX="scroll" className="box-scroll">
       <Table w="full">
         <thead>
           <Tr>
@@ -17,6 +17,7 @@ const SiteTable = ({ sites }) => {
             <Th width="50px">{''}</Th>
           </Tr>
         </thead>
+        
         <tbody>
           {sites.map((site) => (
             <Box as="tr" key={site.id}>
