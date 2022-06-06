@@ -13,10 +13,12 @@ import {
 } from '@chakra-ui/react';
 
 import { DeleteIcon } from "@chakra-ui/icons"
+import { useAuth } from '@/lib/auth';
 
 const DeleteFeedbackButton = ({ feedbackId }) => {
   const [isOpen, setIsOpen] = useState();
   const cancelRef = useRef();
+  const auth = useAuth()
 
   const onClose = () => setIsOpen(false);
   const onDelete = () => {
